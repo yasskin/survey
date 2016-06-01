@@ -6,8 +6,12 @@ $(document).ready(function() {
     var style = $("input:radio[name=style]:checked").val();
     var birthdate = $("#birthdate").val();
     var color = $("#color").val();
-    alert(genre + " " + style + birthdate + color);
+
+    $(".genre").text(genre);
+    $(".style").text(style);
+    $(".birthdate").text(birthdate);
+    $(".color").text(color);
 
     event.preventDefault();
-  })
+  });
 });

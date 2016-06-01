@@ -1,3 +1,12 @@
+// The business (or back-end) logic:
+
+var surveyComplete = function(genre, style, birthdate, color) {
+  $(".genre").text(genre);
+  $(".style").text(style);
+  $(".birthdate").text(birthdate);
+  $(".color").text(color);
+};
+
 // Everything below this line is user interface (or front-end) logic:
 
 $(document).ready(function() {
@@ -7,10 +16,7 @@ $(document).ready(function() {
     var birthdate = $("#birthdate").val();
     var color = $("#color").val();
 
-    $(".genre").text(genre);
-    $(".style").text(style);
-    $(".birthdate").text(birthdate);
-    $(".color").text(color);
+    surveyComplete(genre, style, birthdate, color);
 
     event.preventDefault();
   });

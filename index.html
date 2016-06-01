@@ -7,21 +7,16 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>Survey Form</title>
-
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
-
     <!-- Custom styles for this template -->
     <link href="css/cover.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <script src="js/jquery-1.12.4.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
-
   </head>
-
   <body>
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
@@ -41,10 +36,10 @@
             <div class="inner cover">
               <h1 class="cover-heading">Take our survey.</h1>
               <p class="lead">This survey will tell you your results on the RESULTS page.</p>
-              <form id="survey-answers">
+              <form id="survey-answers" action="results.html" method="GET">
                 <div class="form-group">
                   <label for="genre">Select your favorite genre of books</label>
-                  <select class="form-control" id="genre">
+                  <select class="form-control" id="genre" name="genre">
                     <option>Fantasy</option>
                     <option>Romance</option>
                     <option>Self-Help</option>
@@ -73,11 +68,11 @@
                 </div>
                 <div class ="form-group">
                   <label for="birthdate">Date of birth:</label>
-                  <input id="birthdate" class="form-control" type="date">
+                  <input id="birthdate" class="form-control" type="date" name="birthdate">
                 </div>
                 <div class="form-group">
                   <label for="color">What is your favorite color?</label>
-                  <input id="color" class="form-control" type="color">
+                  <input id="color" class="form-control" type="color" name="color">
                 </div>
                 <button type="submit" class="btn">Submit my survey!</button>
               </form>
